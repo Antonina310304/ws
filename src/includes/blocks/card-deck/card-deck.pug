@@ -1,0 +1,8 @@
+- var arr = []
+- var modifier = '';
+
+    block arr
+    ul.card-deck(class=`card-deck--${modifier}`)
+        each val in arr
+            li._item
+                block mixin

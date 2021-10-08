@@ -1,0 +1,22 @@
+extends ../includes/layout/layout.pug
+
+block var
+    include ../includes/_var
+    - var headerImage = paramsPage.INDEX.image;
+    - var pageTitle = paramsPage.INDEX.pageMainTitle;
+    - var contentClassModifier = paramsPage.INDEX.class
+    - var isContainer = false;
+    - var name = '';
+    - var isIndex = true;
+    - var isShowBtnUp = paramsPage.INDEX.btnUp
+
+
+block header
+    .page-header__wrap
+        h1.page-header__title.page-title=paramsPage.INDEX.header
+        .page-header__tagline
+            +tagline
+        .page-header__counter.d-none.d-l-block
+            +mainCounterList
+block content
+    +indexPage

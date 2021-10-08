@@ -1,0 +1,31 @@
+/************** questions-double-stage-block  *******************/
+
+$marging: 30px;
+
+@import "src/style/_";
+
+.questions-list {
+    margin: 0;
+    margin-bottom: -$marging;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: 720px) {
+        overflow: hidden; /* Fix for firefox and IE 10-11  */
+        column-count: 2;
+        column-gap: 30px;
+    }
+
+    @include desktopStyle {
+        margin-bottom: 0;
+    }
+
+    &__item {
+        margin-bottom: $marging;
+        page-break-inside: avoid; /* Firefox */
+        //display: inline-block;
+        column-break-inside: avoid; /* Chrome, Safari, Opera */
+        break-inside: avoid; /* IE 10+ */
+        break-inside: avoid-column;
+    }
+}

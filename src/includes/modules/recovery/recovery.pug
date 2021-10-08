@@ -1,0 +1,17 @@
+include data
+
+mixin recovery
+    .container
+        .page__header-wrap
+            h2.page__title-wrapper.section-title Восстановление пароля
+            p.page-subheading Мы вышлем инструкцию по смене пароля на вашу электронную почту
+
+        .page__form
+            +form({
+                isDefaultValidate: true,
+                fieldList: recoveryForm,
+                formName: 'recovery',
+                textBtn: 'Восстановить',
+                action: '',
+            })
+

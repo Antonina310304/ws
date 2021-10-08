@@ -1,0 +1,10 @@
+mixin agreement
+    form.pd-agreement-form-js(method='post' target='_self' autocomplete='off')
+        input(type='hidden' name='agreement-success' value='Y')
+        .pd-agreement.pd-agreement-container-js
+            .pd-agreement__col
+                .pd-agreement__text
+                    | На данном сайте собираются метаданные пользователя (cookie, данные об IP-адресе и местоположении) для
+                    | функционирования сайта. Если Вы не хотите чтобы эти данные обрабатывались, то должны покинуть сайт
+            .pd-agreement__col
+                button.pd-agreement__button.pd-agreement-button-js(type='button') Согласен

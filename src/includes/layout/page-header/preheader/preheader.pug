@@ -1,0 +1,6 @@
+mixin preheader()
+    section.preheader
+        a(href=`mailto:${contacts.email}`)._link=contacts.email
+        a(href=`tel:${contacts.telLink}`)._link=contacts.tel
+        ._wrapper
+            button(type="button")=btnText.callback

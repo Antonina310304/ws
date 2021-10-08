@@ -1,0 +1,41 @@
+-
+    var footerMenu2 = [
+        [
+            ['О компании', '/about.html'],
+            ['Магазин задач', '/store.html'],
+            ['FAQ', '/faq.html'],
+            ['Блог', '/blog.html'],
+            ['Кейсы', '/cases.html'],
+            ['Партнерам', '/partners.html'],
+            ['Контакты', '/contacts.html'],
+            ['Вакансии', 'https://rostov.hh.ru/employer/4565059']
+        ],
+        [
+            ['Пользовательское соглашение', '#'], ['Политика конфиденциальности', '#'], ['Скачать реквизиты', '#']
+        ]
+    ]
+
+-
+    var footerMenu = [
+        [
+            'О компании', 'Магазин задач', 'FAQ', 'Блог', 'Кейсы', 'Партнерам', 'Контакты', 'Вакансии'
+        ],
+        [
+            'Пользовательское соглашение', 'Политика конфиденциальности', 'Скачать реквизиты'
+        ]
+    ]
+
+
+mixin pageFooter(pageTitle)
+    footer.page-footer
+        ._in.d-container
+            ._menu.page-footer__wrap
+                ._wrap
+                    +footerMenu(footerMenu2[0])
+                +footerMenu(footerMenu2[1])
+            ._apps.page-footer__wrap
+                +footerLinks("footer-links--page-footer")
+            ._payment-system.page-footer__wrap
+                +paymentSystems
+            +footerContacts
+

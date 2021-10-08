@@ -1,0 +1,218 @@
+/******************* card *********************/
+
+@import "src/style/_";
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    text-decoration: none;
+    background: color(white);
+    border: 2px solid color(grey);
+    border-radius: 4px;
+
+
+    &--hover {
+        &:hover {
+            .card__title {
+                color: color(blue);
+                transition: color 300ms ease-in;
+            }
+
+            .card__img img {
+                transform: scale(1.1);
+                transition: transform 300ms ease-in;
+            }
+        }
+
+        .card__title {
+            transition: color 300ms ease-in;
+        }
+
+        .card__img {
+            overflow: hidden;
+        }
+
+        .card__img img {
+            transition: transform 300ms ease-in;
+        }
+    }
+
+
+    &__in {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 20px;
+
+        .card__text {
+
+            @media (min-width: 768px) {
+                flex: 1 0;
+                padding: 39px;
+            }
+        }
+    }
+
+
+    @media (min-width: $ml) {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    &__icon-blok {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 3;
+    }
+
+    & &__text {
+        margin: 0;
+        font-size: 18px;
+        line-height: 165%;
+    }
+
+    &__icon {
+        display: block;
+        height: 24px;
+        padding: 4px;
+        line-height: 0;
+
+        @media (min-width: 480px) {
+            height: 32px;
+            padding: 8px;
+        }
+
+        &--vert {
+            height: 48px;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__img {
+        position: relative;
+        width: 100%;
+        height: 0;
+        margin: 0;
+        padding-top: 50.78%;
+        overflow: hidden;
+        line-height: 0;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        //border-radius: 4px;
+        //box-shadow: 0 0 0 2px color(grey);
+
+        .card--cases & {
+            position: relative;
+            //box-shadow: none;
+            //border-bottom-left-radius: 0;
+            //border-bottom-right-radius: 0;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 2;
+                display: block;
+                background-image: linear-gradient(224.82deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 36.38%);
+            }
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__img-wrap {
+        flex: 0 0 auto;
+        order: -1;
+        width: 50%;
+        max-width: 220px;
+        margin: 0 auto 20px;
+
+        @media (min-width: 768px) {
+            order: 0;
+            margin: 0 0 0 40px;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            margin: 0;
+        }
+    }
+
+    &__body {
+        padding: 29px;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+
+        @media (min-width: $ml) {
+            //display: flex;
+            //flex: 1 1 auto;
+            //flex-direction: column;
+            //justify-content: space-between;
+        }
+    }
+
+    &__inner {
+
+        @media (min-width: 768px) {
+            flex: 1 0;
+        }
+    }
+
+    &__title {
+        margin: 0 0 20px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 40px;
+        color: color(black);
+        letter-spacing: 0.01em;
+        word-break: break-word;
+
+        .card--cases & {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    &__link {
+        margin: 0;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 30px;
+        font-family: $fontOpenSansLight;
+        color: color(blue);
+        text-decoration-line: underline;
+
+        @media (min-width: 480px) {
+            //margin-top: 28px;
+        }
+    }
+}
+
+/******************* end case-card *********************/
+

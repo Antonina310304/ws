@@ -1,0 +1,16 @@
+extends ../includes/layout/layout.pug
+
+block var
+    include ../includes/_var
+    - var headerImage = paramsPage.CHANGE.image;
+    - var pageTitle = paramsPage.CHANGE.pageMainTitle;
+    - var contentClassModifier = paramsPage.CHANGE.class;
+    - var isContainer = false;
+    - var isShowBtnUp = paramsPage.CHANGE.btnUp
+
+
+
+block header
+    h1.page-header__title.page-title=paramsPage.CHANGE.header
+block content
+    +change

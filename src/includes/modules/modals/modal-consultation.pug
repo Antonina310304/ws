@@ -1,0 +1,17 @@
+-
+    var paramConsultation = {
+        class: "modal",
+        title: "Получите консультацию по вашим вопросам",
+        id: "consultation",
+        titleClass: "title",
+        subtitle: "",
+    }
+
+mixin modalConsultation
+    div(id='consultation').modal.modal-dialog
+        ._in
+            .modal__subheading
+                h4.modal__title.gradient-text.d-none.d-sm-block Получите консультацию по вашим вопросам
+                h4.modal__title.gradient-text.d-sm-none Регистрация
+            ._body
+                +formDefault

@@ -1,0 +1,47 @@
+-
+    var fieldListDetailt = [
+        {
+            isError: false,
+            label: 'Ваше имя',
+            name: 'registerRequestForm[name]',
+            errorText: 'Введите Ваше имя',
+            requireType: 'text',
+            type: 'text',
+            placeholder: '',
+            isRequire: true,
+            value: ''
+        },
+        {
+            isError: false,
+            label: 'Электронная почта',
+            errorText: 'Неверный формат почты',
+            requireType: 'email',
+            name: 'registerRequestForm[email]',
+            type: 'email',
+            possible: 'true',
+            placeholder: '',
+            isRequire: true,
+            value: ''
+        },
+        {
+            isError: false,
+            label: 'Телефон',
+            errorText: 'Введите номер телефона',
+            requireType: 'tel',
+            name: 'registerRequestForm[phone]',
+            possible: 'true',
+            type: 'tel',
+            placeholder: '+7 (___) ___-__-__',
+            isRequire: true,
+            value: ''
+        },
+    ]
+
+mixin formDefault(formName)
+    +form({
+        isDefaultValidate: true,
+        fieldList: fieldListDetailt,
+        formName: 'default',
+        textBtn: btnText.send,
+        action: 'http://localhost/success.php',
+    })

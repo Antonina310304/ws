@@ -1,0 +1,85 @@
+/******************* card-group *********************/
+
+@import "src/style/_";
+
+$padding: 20px;
+
+.card-deck {
+    $_this: &;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $ml) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -$padding;
+        margin-bottom: -$padding * 2;
+        margin-left: -$padding;
+    }
+
+    .index-page__tasks-list & {
+        @media (max-width: 479px) {
+            margin-bottom: -40px;
+        }
+    }
+
+    &--column {
+
+        @media (min-width: $sm) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -$padding;
+            margin-bottom: -$padding * 3;
+            margin-left: -$padding;
+
+        }
+    }
+
+    &__item {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: $ml) {
+            display: flex;
+            box-sizing: border-box;
+            width: 50%;
+            padding-right: $padding;
+            padding-left: $padding;
+
+            &:last-child {
+                margin-bottom: $padding * 2;
+            }
+        }
+
+
+        #{$_this}--column & {
+
+            @media (min-width: $sm) {
+                width: 50%;
+                justify-content: center;
+                margin-bottom: $padding * 3;
+                padding-right: $padding;
+                padding-left: $padding;
+                box-sizing: border-box;
+            }
+
+        }
+
+        #{$_this}--v2 {
+            @include desktopStyle {
+                width: 33.333%;
+            }
+        }
+
+        .index-page__tasks-list & {
+            @media (max-width: 479px) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

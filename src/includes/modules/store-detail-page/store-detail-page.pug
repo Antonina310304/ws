@@ -1,0 +1,23 @@
+include description
+
+mixin storeDetailPage
+    .store-page__in.d-container
+        .m-container.page__page-nav
+            section.page__section
+                .page__side-nav
+                    +sideNavBlock("Каталог", marketNav)
+        .store-page__wrap
+            .m-container
+                section.page__section
+                    h2.store-page__title-wrap.section-title Установка классной штуки на сайт
+                    .store-page__spacer
+                        .store-page__offer
+                            +offer
+                        .store-page__button
+                            +buttonAttr({mixin: 'button--blue', text: btnText.offer, attr:{'data-toggle': 'modal', 'data-target': 'add-case'}})
+                    .store-page__spacer
+                        .store-page__description.block-description
+                            +description
+                section.page__section
+                    h2.store-page__title-wrap.section-title Также рекомендуем
+                    include store-page-promotion

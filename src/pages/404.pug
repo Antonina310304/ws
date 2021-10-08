@@ -1,0 +1,21 @@
+extends ../includes/layout/layout.pug
+
+block var
+    include ../includes/_var
+    - var headerImage = paramsPage.PAGE_404.image;
+    - var pageTitle = paramsPage.PAGE_404.pageMainTitle;
+    - var contentClassModifier = paramsPage.PAGE_404.class
+    - var isContainer = false;
+    - var name = '';
+    - var isIndex = true;
+    - var isShowBtnUp = paramsPage.PAGE_404.btnUp
+
+
+block header
+    .page-header__wrap
+        h1.page-header__title.page-title=paramsPage.PAGE_404.header
+        .page-header__btn
+            a(type="submit" href="/").button.button--white.button--big перейти На главную
+
+block content
+    //-+page404

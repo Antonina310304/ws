@@ -1,0 +1,73 @@
+/******************* advice *********************/
+
+@import "src/style/_";
+
+$margin: 48px;
+
+.advice {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__img {
+        max-width: 100%;
+        max-height: 100%;
+        box-sizing: border-box;
+        margin: 0 0 $margin;
+        line-height: 0;
+        border: 1px solid color(gainsboro);
+        border-radius: 4px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        font-size: 26px;
+        line-height: 35px;
+        color: #2D2D2D;
+        letter-spacing: 0.5px;
+    }
+
+
+    &__item {
+
+        &::before {
+            top: 40px;
+            left: 30px;
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 64px;
+    }
+
+
+    &__in {
+        box-sizing: border-box;
+        padding: 128px 30px 30px;
+        background: #F8F8FA;
+        border: 2px solid color(grey);
+        border-radius: 4px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        font-size: 26px;
+        line-height: 35px;
+        letter-spacing: 0.5px;
+    }
+
+    &__text {
+        margin: 0 0 $margin;
+        font-weight: 300;
+        font-family: $fontOpenSansLight;
+        font-size: 18px;
+        line-height: 165%;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

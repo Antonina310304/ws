@@ -1,0 +1,18 @@
+-
+    var paramsErrorForm = {
+        class: "st",
+        title: "Ошибка отправки формы",
+        id: "id-error-form",
+        titleClass: "subtitle"
+    }
+
+
+mixin modalErrorForm
+    div(id='id-error-form').modal-cb
+        .modal.modal-dialog.modal--cb
+            button(type="button" class="mfp-close js-modal-close")
+            ._in
+                h4(class=`modal__subtitle`).gradient-text Произошла ошибка
+                ._body
+                    p.modal__wrap.page-subheading Пожалуйста, попробуйте позднее
+                    +buttonGradientBig(btnText.ok)(class='js-modal-close')

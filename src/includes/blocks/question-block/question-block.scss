@@ -1,0 +1,55 @@
+/*********** question-block *************/
+
+@import "src/style/_";
+
+$questionsIcon: ("man", "time", "price", "payment",
+"prepaid", "hosting", "bags", "testing",
+"priority", "access", "syncing", "portal", "beginning");
+
+.question-block {
+    padding: 32px;
+    background: color(white);
+    border: 2px solid color(grey);
+    border-radius: 4px;
+
+    a {
+        color: inherit;
+    }
+
+    &.line-block {
+        padding-top: 40px;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 20px;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 35px;
+        color: color(black);
+        letter-spacing: 0.5px;
+    }
+
+    &__text {
+        margin: 0 0 20px;
+        font-weight: 300;
+        font-family: "Open Sans light", "Arial", sans-serif;
+        font-size: 18px;
+        line-height: 165%;
+    }
+
+    &__icon {
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin-left: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @each $question in $questionsIcon {
+            &--#{$question} {
+                background-image: url("i/icons/#{$question}.svg");
+            }
+        }
+    }
+}

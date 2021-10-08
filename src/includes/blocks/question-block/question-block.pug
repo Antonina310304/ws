@@ -1,0 +1,9 @@
+- var mailLink = '<a href="mailto:info@wssupport.ru"> info@wssupport.ru</a>';
+
+mixin questionBlock(question)
+    div(class=question.unique ? 'line-block': '').question-block
+        p._title=question.title
+        p._text=question.text
+            if(question.unique)
+                |!{mailLink}
+        i(style="background-image: url(i/icons/" + question.icon + ".svg)")._icon

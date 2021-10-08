@@ -1,0 +1,16 @@
+.tagline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -5px;
+
+    &__item {
+        margin: 5px;
+        line-height: 0;
+        box-shadow: 0px 0px 11.2px rgba(0, 0, 0, 0.08);
+
+        a {
+            display: block;
+        }
+    }
+}

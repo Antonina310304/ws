@@ -1,0 +1,42 @@
+/*************** footer-app ****************/
+
+@import "src/style/_";
+
+.app {
+    $this: &;
+    display: block;
+    align-items: center;
+    box-sizing: border-box;
+    width: 138px;
+    height: 40px;
+    line-height: 0;
+    cursor: pointer;
+
+    &:hover {
+        #{$this}__qr {
+            display: block;
+            animation: footerQr 400ms forwards;
+        }
+    }
+
+    &__qr {
+        display: none;
+        box-sizing: border-box;
+        width: 138px;
+        height: 138px;
+        margin: 8px 0 0;
+        padding: 8px;
+        background: color(white);
+        border-radius: 4px;
+    }
+}
+
+@keyframes footerQr {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

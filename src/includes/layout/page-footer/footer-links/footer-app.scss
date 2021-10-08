@@ -1,0 +1,14 @@
+/*************** footer-app ****************/
+
+@import "src/style/_";
+
+.footer-app {
+    border-radius: 4px;
+    border: 1px solid transparentize(color(white), 0.5);
+    transition: border-color 200ms ease-in;
+
+    &:hover {
+        border-color: color(white);
+        transition: border-color 200ms ease-in;
+    }
+}

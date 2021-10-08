@@ -1,0 +1,47 @@
+-
+    var appsBtb = [
+        {
+            _img: "i/footer/apps_google.svg",
+            alt: "google play",
+            qrAlt: "qr код google play",
+            link: 'https://play.google.com/store/apps/details?id=ru.support.worksolutions'
+        },
+        {
+            _img: "i/footer/apps_apple.svg",
+            alt: "apple store",
+            qrAlt: "qr код apple store",
+            link: 'https://itunes.apple.com/ru/app/wssupport/id1255861542?mt=8'
+        },
+        {
+            _img: "i/index/google_store.svg",
+            alt: "google play",
+            qrAlt: "qr код apple store",
+            link: 'https://play.google.com/store/apps/details?id=ru.support.worksolutions'
+        },
+        {
+            _img: "i/index/apple_store.svg",
+            alt: "apple store",
+            qrAlt: "qr код google play",
+            link: 'https://itunes.apple.com/ru/app/wssupport/id1255861542?mt=8'
+        },
+    ];
+
+mixin appGoogle
+    +appFooter(appsBtb[0])
+
+mixin appApple
+    +appFooter(appsBtb[1])
+
+mixin appGoogleIndex
+    +_app(appsBtb[2])
+
+mixin appAppleIndex
+    +_app(appsBtb[3])
+
+mixin _app(param, modifier)
+    a(href=param.link target="_blank" class=modifier).app.js-qr
+        img(src=param._img atl=param.alt)
+        p.__qr
+
+mixin appFooter(param)
+    +_app(param, 'footer-app')

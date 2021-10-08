@@ -1,0 +1,29 @@
+include ../_
+doctype html
+html
+    block var
+    +head(pageTitle)
+    body
+        +pageHeader(headerImage, contentClassModifier, name)
+            block header
+        main(class=`${contentClassModifier}-page `).page
+            if(isContainer == true)
+                .container
+                    block content
+            else
+                block content
+        +pageFooter()
+        .page__modals
+            +modalSuccessForm
+            +modalErrorForm
+            +modalAuthorization
+            +modalCallback
+            +modalSale
+            +modalAddCase
+            +modalSelectProject
+            +modalSuccessSelectCase
+            +modalCbCase
+        +stickyWa
+        if(isShowBtnUp)
+            +upBtn
+        +scripts

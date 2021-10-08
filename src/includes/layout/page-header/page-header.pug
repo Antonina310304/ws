@@ -1,0 +1,17 @@
+mixin pageHeader(image, contentClassModifier, activeLink)
+    header.page-header(class=`page-header--${contentClassModifier}` style=`background-image: url(i/header/${image})`)
+        +agreement
+        ._decor
+        ._in
+            ._preheader.d-none.d-m-block
+                ._contacts
+                    +contactsPreheader()
+                ._callback
+                    +buttonCallback(btnText.callback)
+                p._separatop.d-none.d-xl-block
+            ._logo
+                +logo()
+            ._main-nav
+                +mainNav(activeLink)
+        ._body
+            block

@@ -1,0 +1,34 @@
+-
+    var questionsForm = [
+        {
+            isError: false,
+            isRequire: true,
+            label: 'Электронная почта',
+            errorText: 'Неверный формат почты',
+            requireType: 'email',
+            name: 'email',
+            type: 'email',
+            placeholder: '',
+            value: ''
+        },
+        {
+            isError: false,
+            isRequire: true,
+            label: 'Ваш Вопрос',
+            errorText: 'Напишите свой вопрос',
+            requireType: 'textarea',
+            type: 'textarea',
+            name: 'question',
+            placeholder: '',
+            value: ''
+        },
+    ]
+
+mixin formQuestions
+    +form({
+        isDefaultValidate: true,
+        fieldList: questionsForm,
+        formName: 'default',
+        textBtn: btnText.questions,
+        action: 'http://localhost/gift.php',
+    })

@@ -1,0 +1,56 @@
+-
+    var casesList = [
+        {
+            title: 'Автодобавление контактов в email-рассылку UniSender',
+            icon: 'workshop',
+            img: 'cases/office'
+        },
+        {
+            title: 'Создание личных кабинетов на сайте для существующих клиентов из базы 1С',
+            icon: 'delta',
+            img: 'cases/cabinet'
+        },
+        {
+            title: 'Удаление вредоносного кода (вирусов) с сайта',
+            icon: 'wine',
+            img: 'cases/open-shop'
+        },
+        {
+            title: 'Вывод разделов каталога на главной',
+            icon: 'cosmodrome',
+            img: 'cases/sections'
+        },
+        {
+            title: 'Вывод региональных данных на сайте',
+            icon: 'mamaki',
+            img: 'cases/data'
+        },
+        {
+            title: 'Генерации прайс-листа каталога товаров в xls-формате',
+            icon: 'kitchen-team',
+            img: 'cases/price-list'
+        },
+        {
+            title: 'Создание пользовательского типа свойства заказа',
+            icon: '',
+            img: 'cases/properties'
+        },
+        //- {
+        //-     title: 'Генерации прайс-листа каталога товаров в xls-формате',
+        //-     icon: '',
+        //-    img: 'cases/price-list'
+        //- },
+        {
+            title: 'Создание robots.txt, sitemap.xml и счетчиков для разных поддоменов',
+            icon: '',
+            img: 'cases/robots'
+        },
+        {
+            title: 'Синхронизация статей тестовой площадки с продакшн-сайтом',
+            icon: 'workshop',
+            img: 'cases/syncing'
+        }
+    ]
+
+mixin caseList
+    +cardGroup(casesList, 'card--hover card--cases')

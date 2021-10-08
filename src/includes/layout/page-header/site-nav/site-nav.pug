@@ -1,0 +1,7 @@
+mixin siteNav(activeLink)
+    - var nav = ['О компании', 'Магазин задач', 'Вопросы и ответы', 'Блог', 'Кейсы', 'Контакты'];
+    ul.site-nav
+        each val in nav
+            li._item
+                a(href="#" class=activeLink == val ? "site-nav__link--active" : "")._link=val
+

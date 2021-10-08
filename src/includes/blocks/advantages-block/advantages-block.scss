@@ -1,0 +1,34 @@
+/***************** advantages-block ************************/
+
+@import "src/style/_";
+
+.advantages-block {
+    position: relative;
+    box-sizing: border-box;
+    padding: 40px 40px 48px;
+    text-align: center;
+    background: #FFFFFF;
+    border: 2px solid #ECECEC;
+    border-radius: 4px;
+
+    &::before {
+        top: auto;
+        bottom: 4px;
+        left: 4px;
+    }
+
+    &__title {
+        margin: 0 0 20px;
+        font-size: 26px;
+        line-height: 35px;
+        letter-spacing: 0.5px;
+    }
+
+    &__text {
+        margin: 0;
+        font-weight: 300;
+        font-family: $fontOpenSansLight;
+        font-size: 18px;
+        line-height: 165%;
+    }
+}

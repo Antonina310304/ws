@@ -1,0 +1,16 @@
+extends ../includes/layout/layout.pug
+
+block var
+    include ../includes/_var
+    - var headerImage = paramsPage.BLOG_DETAIL.image;
+    - var pageTitle = paramsPage.GOOGLE_PAGE.header;
+    - var contentClassModifier = paramsPage.BLOG_DETAIL.class
+    - var isContainer = false;
+    - var isShowBtnUp = paramsPage.GOOGLE_PAGE.btnUp;
+    - var name = 'Кейсы';
+
+
+block header
+        h1.page-header__title.page-title=paramsPage.GOOGLE_PAGE.header
+block content
+    +googlePage

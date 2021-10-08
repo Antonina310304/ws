@@ -1,0 +1,130 @@
+/************ базовые стили ***************/
+@import "_";
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $fontOpenSans;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.overflow-mob {
+    @media (max-width: 1023px) {
+        overflow: hidden;
+    }
+}
+
+.hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    clip: rect(0 0 0 0) !important;
+}
+
+.container {
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @media (min-width: 480px) {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+.container-max {
+    max-width: 1900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+
+    @include desktopStyle {
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+}
+
+.container-min {
+    max-width: 720px;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+.container-sm {
+    max-width: 870px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-small {
+    max-width: 1137px;
+}
+
+.m-container {
+
+    @media (max-width: 1023px) {
+        max-width: 1300px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 20px;
+        padding-left: 20px;
+
+        @media (min-width: 480px) {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+    }
+}
+
+.d-container {
+
+    @include desktopStyle {
+        max-width: 1300px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+.bg-white {
+    background: color(white);
+}
+
+.d-flex {
+    display: flex;
+}
+
+.block-center {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.blue-color {
+    color: color(blue) !important;
+}
+
+.hidden-default {
+    visibility: hidden;
+}
+
+.block-left {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    text-align: left !important;
+}
+
+.block-md-left {
+    @media (min-width: 480px) {
+        margin-left: 0 !important;
+        margin-right: auto !important;
+    }
+}

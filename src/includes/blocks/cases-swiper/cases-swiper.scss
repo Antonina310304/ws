@@ -1,0 +1,80 @@
+/******************* case-list *********************/
+
+@import "src/style/_";
+
+.cases-swiper {
+    position: relative;
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @include desktopStyle {
+        margin-right: -35px;
+        margin-left: -35px;
+        padding-right: 35px;
+        padding-left: 35px;
+    }
+
+    &__item {
+        display: flex;
+        height: auto;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        width: 44px;
+        height: 44px;
+        background-color: color(white);
+        background-image: url("i/icons/icon_30.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 26px auto;
+        border-radius: 50%;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+        transform: translateY(-50%);
+        cursor: pointer;
+        transition: box-shadow 150ms ease-in, opacity 105ms ease-in;
+
+        &.disabled {
+            opacity: 0;
+            transition: opacity 105ms ease-in;
+        }
+
+        &:hover {
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.16);
+            transition: box-shadow, 150ms ease-in;
+        }
+
+        &:active {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+            transition: box-shadow, 150ms ease-in;
+        }
+
+        &.prev {
+            left: 4px;
+            transform: translateY(-50%) rotate(180deg);
+
+            @include desktopStyle {
+                left: 7px;
+            }
+        }
+
+        &.next {
+            right: 5px;
+
+            @include desktopStyle {
+                right: 7px;
+            }
+        }
+
+
+        @include desktopStyle {
+            width: 56px;
+            height: 56px;
+            background-size: 32px auto;
+        }
+    }
+}

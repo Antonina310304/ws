@@ -1,0 +1,138 @@
+/******************* card *********************/
+
+@import "src/style/_";
+
+.card-horizontal {
+    $_this: &;
+
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    color: color(black);
+    text-decoration: none;
+    transition: color 150ms ease-in;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:hover {
+        .card-horizontal__title {
+            color: #5A5A5A;
+            transition: color 150ms ease-in;
+        }
+    }
+
+    &--v2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__icon-blok {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+    }
+
+    &__img {
+        position: relative;
+        flex: 0 0 100px;
+        width: 100px;
+        height: 100px;
+        margin: 0;
+        margin-right: 20px;
+        overflow: hidden;
+        line-height: 0;
+        background: color(gray98);
+        border-radius: 4px;
+        //box-shadow: inset 0 0 0 2px color(grey);
+        border: 2px solid color(grey);
+        box-sizing: border-box;
+
+
+        #{$_this}--v2 & {
+            margin-right: 0;
+            margin-bottom: 20px;
+            box-shadow: 0px 10px 20px rgba(11, 24, 36, 0.2);
+        }
+
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            max-width: 100%;
+            max-height: 100%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__body {
+        max-width: calc(100% - 120px);
+
+
+        @media (min-width: $ml) {
+            display: flex;
+            flex: 1 1 auto;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        #{$_this}--v2 & {
+            width: 100%;
+            max-width: none;
+            text-align: center;
+        }
+    }
+
+    &__price {
+        margin: 0;
+        font-family: $fontOpenSansLight;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 142%;
+        color: color(black);
+        letter-spacing: 0.02em;
+
+        .ruble {
+            color: #717171;
+        }
+    }
+
+    &__tag {
+        margin: 0;
+        font-weight: 300;
+        font-family: $fontOpenSansLight;
+        font-size: 16px;
+        line-height: 142%;
+        color: color(placeholder);
+        letter-spacing: 0.02em;
+    }
+
+    &__title {
+        margin: 0 0 20px;
+        overflow: hidden;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 142%;
+        color: color(black);
+        letter-spacing: 0.02em;
+        //white-space: nowrap;
+        //text-overflow: ellipsis;
+    }
+
+    &__link {
+        margin: 0;
+        font-weight: 300;
+        font-family: $fontOpenSansLight;
+        font-size: 18px;
+        line-height: 30px;
+        color: color(blue);
+        text-decoration-line: underline;
+    }
+
+    &__wrap {
+        margin-bottom: 6px;
+    }
+}
+
+/******************* end case-card *********************/
+

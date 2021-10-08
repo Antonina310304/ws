@@ -1,0 +1,28 @@
+-
+    var marketNav = [
+        "Безопасность", "Для интернет-магазина",
+        "Для увеличения продаж", "Поддережка клиентов", "Навигация",
+        "SEO", "Разное"
+    ]
+
+mixin marketPage
+    .store-page__in.d-container
+        section.page__page-nav
+            .m-container
+                .page__side-nav
+                    +sideNavBlock("Каталог", marketNav)
+        .store-page__wrap
+            .m-container
+                section.store-page__section
+                    h2.section-title.store-page__title-wrap Новинки
+                    include store-page-new
+
+            .m-container
+                section.store-page__section
+                    h2.section-title.store-page__title-wrap Рекомендуем для продвижения
+                    include store-page-promotion
+
+            .m-container
+                section.page__section
+                    h2.section-title.store-page__title-wrap Рекомендуем для безопасности
+                    include store-page-security

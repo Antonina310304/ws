@@ -1,0 +1,140 @@
+-
+    var clientsArr = [
+        {src: '1.png', alt: 'ZCTS'},
+        {src: '2.png', alt: 'bed.expert'},
+        {src: '3.png', alt: 'Идеальный гардероб'},
+        {src: '4.png', alt: 'Элемент шоп'},
+        {src: '5.png', alt: 'Аэроклуб'},
+        {src: '6.png', alt: 'Cosmodrome'},
+        {src: '7.png', alt: 'Директория'},
+        {src: '8.png', alt: 'Atletcity'},
+        {src: '9.png', alt: 'Prime Pride'},
+        {src: '10.png', alt: 'Японика'},
+        {src: '11.png', alt: 'GEN'},
+    ]
+
+mixin aboutPage
+    .about-page__wrap
+        header.about-page__header
+            .about-page__container
+                p.about-page__logo-wrap
+                    include logo.svg
+                h1.about-page__main-title WS Support
+                h3.about-page__subtitle
+                    | Это понятная техподдержка сайтов на 1С‑Битрикс с гарантией выполнения задач
+        section.about-page__advantages
+            .about-page__container
+                h2.about-page__title.hidden Преимущества
+                .about-page__our-advantages
+                    ul.our-advantages
+                        li.our-advantages__item
+                            .our-advantages__in
+                                i.our-advantages__i.our-advantages__i--clients
+                                h4.our-advantages__title
+                                    | Для клиентов
+                                p.our-advantages__text
+                                    |  Предоставляем
+                                    |
+                                    strong прозрачную
+                                    |  «белую» услугу с удобным сервисом. Максимально понятная и экономичная техподдержка. Решение ваших задач по четко отработанным алгоритмам.
+                        // item
+                        li.our-advantages__item
+                            .our-advantages__in
+                                i.our-advantages__i.our-advantages__i--worker
+                                h4.our-advantages__title
+                                    | Для сотрудников
+                                p.our-advantages__text
+                                    | Обеспечиваем комфортные условия труда, развиваем
+                                    |
+                                    strong профессиональные навыки
+                                    | . Честный коллектив с позитивными людьми и без излишних бюрократических правил.
+                        // item
+                        li.our-advantages__item
+                            .our-advantages__in
+                                i.our-advantages__i.our-advantages__i--others
+                                h4.our-advantages__title Для других
+                                p.our-advantages__text Всегда открыты к диалогу:
+                                ul
+                                    li Готовы делиться опытом.
+                                    li Рассматриваем новые перспективы сотрудничества.
+                                    li Умеем обсуждать и договариваться.
+                        // item
+        section.about-page__stats
+            .about-page__container
+                h2.about-page__title.hidden Статистика
+                .about-page__our-stats.our-stats
+                    .our-stats__description
+                        dl.our-stats__dl
+                            dt.our-stats__dt
+                                | 3 года
+                            dd.our-stats__dd стремительного роста
+                        dl.our-stats__dl
+                            dt.our-stats__dt
+                                | 300+
+                            dd.our-stats__dd проектов на поддержке
+                    .our-stats__graph
+                        img(src='i/about/stats.svg' alt='График роста числа проектов')
+                // svg
+    section.about-page__team.about-page__wrap
+        .about-page__container
+            header.about-page__team-header
+                .about-page__team-wrap
+                    p.about-page__team-img-wrap
+                        img(src='i/about/mul.png' alt='Максим Мул')
+                    dl.about-page__name
+                        dt Максим Мул
+                        dd Сооснователь компании
+                        dd
+                .about-page__blockquote-wrap
+                    blockquote.about-page__blockquote
+                        i Одно из наших главных качеств
+                        | — это умение масштабироваться. Мы научились расти без потерь в качестве за счет четких описанных стандартов и настроенных внутренних инструментов.
+                        |                 Без этого было бы невозможно заявлять о таких высоких целях в рамках миссии на рынке. Согласны?
+            .about-page__wrap
+                h2.about-page__title Наша команда
+                .about-page__photos
+                    .about-page__photos-in
+                        p.about-page__team-img-wrapped.about-page__team-img-wrapped--full
+                            img(src='i/about/team-1.jpg' alt='')
+                    .about-page__photos-in
+                        p.about-page__team-img-wrapped
+                            img(src='i/about/team-2.jpg' alt='')
+                        p.about-page__team-img-wrapped
+                            img(src='i/about/team-1.jpg' alt='')
+    section.about-page__progress.about-page__wrap
+        .about-page__container
+            h2.about-page__title Достижения
+            .about-page__our-progress
+                .swiper-container.js-slider-progress
+                    .our-progress.swiper-wrapper
+                        .our-progress__item.swiper-slide
+                            p.our-progress__img-wrap.our-progress__img-wrap--no-border
+                                img(src='i/about/certificate-1.png' alt='Достижение 1')
+                        .our-progress__item.swiper-slide
+                            p.our-progress__img-wrap.our-progress__img-wrap--no-border
+                                img(src='i/about/certificate-0.png' alt='Достижение 2')
+                        .our-progress__item.swiper-slide
+                            p.our-progress__img-wrap.our-progress__img-wrap--no-border
+                                img(src='i/about/certificate-2.png' alt='Достижение 3')
+                        .our-progress__item.swiper-slide
+                            p.our-progress__img-wrap.our-progress__img-wrap--no-border
+                                img(src='i/about/certificate-3.png' alt='Достижение 4')
+                        .our-progress__item.swiper-slide
+                            p.our-progress__img-wrap.our-progress__img-wrap--no-border
+                                img(src='i/about/certificate-4.png' alt='Достижение 5')
+    section.about-page__partners-block.about-page__wrap
+        .about-page__container
+            h2.about-page__title Наши партнеры
+            .about-page__partners
+                ul.partners
+                    each val in clientsArr
+                        li.partners__item
+                            p.partners__item-wrap
+                                img(src='i/about/' + val.src alt=val.alt)
+    section.page__wrap
+        .about-page__container
+            .page__wrap-small.page__subtitle-wrap
+                h2.page-subtitle.page__subtitle Обратная связь
+                p.page-subheading Оставьте свои контактные данные, вскоре мы вам перезвоним и ответим на все вопросы
+            .page__form
+                +formDefault

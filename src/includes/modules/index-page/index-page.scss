@@ -1,0 +1,121 @@
+/************ index-page ***************/
+
+@import "src/style/_";
+
+.index-page {
+    background: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @media (min-width: $l) {
+        position: relative;
+        //margin-top: -110px;
+        padding-top: 0;
+    }
+
+    &__button {
+        max-width: 315px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &__balloon {
+        max-width: 480px;
+        margin-bottom: 72px;
+
+        @media (min-width: 480px) {
+            margin-bottom: 88px;
+        }
+
+        @include desktopStyle {
+            margin-bottom: 0;
+            margin-left: 80px;
+
+            &::before {
+                top: auto !important;
+                bottom: 4px;
+            }
+        }
+    }
+
+
+    &__img {
+        @include base-img-style;
+        max-width: 560px;
+    }
+
+    &__tasks-list {
+        margin: 0 auto 64px;
+        max-width: 1110px;
+    }
+
+    &__in {
+        padding-top: 0;
+        padding-bottom: 96px;
+        margin-bottom: 0;
+
+        @include desktopStyle {
+            padding-bottom: 140px;
+        }
+    }
+
+    &__section {
+        padding-top: 96px;
+        padding-bottom: 96px;
+        margin-bottom: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+
+        @include desktopStyle {
+            padding-top: 140px;
+            padding-bottom: 140px;
+
+        }
+    }
+
+    &__section:first-child {
+
+        @media (min-width: 992px) {
+            padding-top: 206px;
+        }
+
+        @media (min-width: 1024px) {
+            padding-top: 250px;
+        }
+    }
+
+    &__reg-block {
+        max-width: 876px;
+        margin: 0 auto;
+    }
+
+    &__map {
+        @include base-img-style;
+
+        @media (min-width: 992px) {
+            margin-top: -60px;
+            position: relative;
+            z-index: -1;
+        }
+    }
+
+    .card-deck {
+        @include desktopStyle {
+            margin-left: -30px;
+            margin-right: -30px;
+        }
+    }
+
+    .card-deck .card-deck__item {
+
+        @include desktopStyle {
+            width: 33.333%;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+

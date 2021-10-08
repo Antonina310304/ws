@@ -1,0 +1,5 @@
+mixin cardGroup(arr, type)
+    ul.card-group
+        each val in arr
+            li._item
+                +card(val, type)

@@ -1,0 +1,47 @@
+
+-
+    var casesListIndex = [
+        {
+            title: 'Автодобавление контактов в email-рассылку UniSender',
+            icon: 'workshop',
+            img: 'cases/office'
+        },
+        {
+            title: 'Создание личных кабинетов на сайте для существующих клиентов из базы 1С',
+            icon: 'delta',
+            img: 'cases/cabinet'
+        },
+        {
+            title: 'Удаление вредоносного кода (вирусов) с сайта',
+            icon: 'wine',
+            img: 'cases/open-shop'
+        },
+        {
+            title: 'Вывод разделов каталога на главной',
+            icon: 'cosmodrome',
+            img: 'cases/sections'
+        },
+        {
+            title: 'Вывод региональных данных на сайте',
+            icon: 'mamaki',
+            img: 'cases/data'
+        },
+        {
+            title: 'Генерации прайс-листа каталога товаров в xls-формате',
+            icon: 'kitchen-team',
+            img: 'cases/price-list'
+        },
+    ]
+
+
+
+.cases-swiper
+    .swiper-container
+        .swiper-wrapper
+            each val in casesListIndex
+                .cases-swiper__item.swiper-slide
+                    +card(val, 'card--cases')
+    .swiper-nav
+        .cases-swiper__btn.next
+        .cases-swiper__btn.prev
+

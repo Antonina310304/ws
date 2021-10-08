@@ -1,0 +1,112 @@
+@import "_";
+
+
+/************ стили сетки ***************/
+
+$grid-breakpoints: (
+    ex: $ex,
+    sm: 480,
+    m: $m,
+    ml: 640,
+    lm: 768,
+    l: 992,
+    xl: 1024,
+);
+
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.row {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.row-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+
+.order-xl-first {
+
+    @include desktopStyle {
+        order: -1;
+    }
+}
+.col-12 {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.col-ml-6 {
+    @media(min-width: 640px) {
+        width: 50%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+.col-lg-3 {
+    @include desktopStyle {
+        width: 33.3333%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+
+@each $key, $breakpoints in $grid-breakpoints {
+
+    .d-#{$key}-block {
+
+        @include get-adaptive($breakpoints) {
+            display: block !important;
+        }
+    }
+
+    .d-#{$key}-none {
+
+        @include get-adaptive($breakpoints) {
+            display: none !important;
+        }
+    }
+}
+
+.order-lg-1 {
+    @media (min-width: 1280px) {
+        order: 1;
+    }
+}
+.order-lg-2 {
+    @media (min-width: 1280px) {
+        order: 2;
+    }
+}
+
+.flex-baseline {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: 992px) {
+        justify-content: flex-start;
+    }
+}
+
+
+/************ end стили сетки ***************/

@@ -1,0 +1,53 @@
+.pd-agreement {
+  box-sizing: border-box;
+  z-index: 3;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(51, 51, 51, 0.9);
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 15px; }
+.pd-agreement__text {
+  line-height: 1.3em;
+  font-size: 1em;
+  letter-spacing: -0.03em;
+  color: #989898;
+  padding-right: 1em; }
+.pd-agreement__button {
+  background: #fff;
+  color: #000;
+  border: 0;
+  padding: 0 0.7em;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.95em;
+  height: 2em;
+  border-radius: 0;
+  margin-right: 40px;
+}
+@media only screen and (max-width: 1023px) {
+  .pd-agreement {
+    font-size: 13px; }
+  .pd-agreement__button {
+    height: 3em; } }
+@media only screen and (max-width: 639px) {
+  .pd-agreement {
+    padding: 10px 10px;
+    font-size: 11px; }
+  .pd-agreement__text {
+    line-height: 1em; }
+  .pd-agreement__button {
+    font-size: 1.2em; } }

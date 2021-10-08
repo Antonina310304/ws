@@ -1,0 +1,17 @@
+extends ../includes/layout/layout.pug
+
+block var
+    include ../includes/_var
+    - var headerImage = paramsPage.MARKET.image;
+    - var pageTitle = paramsPage.MARKET.pageMainTitle;
+    - var contentClassModifier = paramsPage.MARKET.class;
+    - var isContainer = false;
+    - var isShowBtnUp = paramsPage.MARKET.btnUp;
+    - var name = 'Магазин задач';
+
+
+
+block header
+    h1.page-header__title.page-title=paramsPage.MARKET.header
+block content
+    +marketPage

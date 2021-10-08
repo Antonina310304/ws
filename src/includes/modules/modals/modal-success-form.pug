@@ -1,0 +1,25 @@
+-
+    var paramSuccessForm = {
+        class: "modal",
+        title: "Спасибо за обращение",
+        id: "id-success-form",
+        titleClass: "subtitle",
+        subtitle: 'Наш специалист перезвонит вам в ближайшее время'
+    }
+
+mixin modalSuccessForm
+    div(id='id-success-form').modal-cb
+        .modal.modal-dialog.modal--cb
+            button(type="button" class="mfp-close js-modal-close")
+            ._in
+                h4(class=`modal__subtitle`).gradient-text Спасибо за обращение
+                ._body
+                    p.modal__wrap.page-subheading Наш специалист перезвонит вам в ближайшее время
+                    +buttonGradientBig(btnText.ok)(class='js-modal-close')
+
+    //-+modal(paramSuccessForm)
+    //-    //p.modal__subheading.page-subheading
+    //-    +buttonModal(btnText.ok)
+
+
+

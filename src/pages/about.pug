@@ -1,0 +1,16 @@
+extends ../includes/layout/layout.pug
+
+block var
+    include ../includes/_var
+    - var headerImage = paramsPage.ABOUT.image;
+    - var pageTitle = paramsPage.ABOUT.pageMainTitle;
+    - var contentClassModifier = paramsPage.ABOUT.class;
+    - var isContainer = false;
+    - var isShowBtnUp = false;
+    - var name = 'О компании'
+
+
+block header
+    h1.page-header__title.page-title=paramsPage.ABOUT.header
+block content
+    +aboutPage

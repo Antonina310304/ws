@@ -1,0 +1,103 @@
+/********************* side-nav **********************/
+
+@import "src/style/_";
+
+$marging: 8px;
+$transition: none;
+
+.side-nav {
+    //display: flex;
+
+    @include desktopStyle {
+        display: block;
+    }
+
+    &__wrap {
+        display: inline-block !important;
+        margin: 0 $marging;
+        width: auto;
+
+
+        @include desktopStyle {
+            display: block !important;
+            margin: 0;
+        }
+    }
+
+    &__btn-nav-next {
+        right: 20px;
+
+        @include desktopStyle {
+            display: none;
+        }
+    }
+
+    &__btn-nav-prev {
+        left: 20px;
+        &:before {
+            transform: translate(-50%, -50%) rotate(180deg);
+        }
+
+        @include desktopStyle {
+            display: none;
+        }
+    }
+
+
+
+    &__item {
+        display: block;
+        padding: $marging 20px;
+        background: color(white);
+
+        font-size: 16px;
+        line-height: 40px;
+        color: color(black);
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        border-radius: 4px;
+        font-weight: 300;
+        font-family: "Open Sans light", "Arial", sans-serif;
+        box-shadow: inset 0 0 0 2px color(grey);
+
+        @include desktopStyle {
+            padding-left: 40px;
+            border-radius: 0;
+            box-shadow: none;
+            transition: $transition;
+        }
+
+        &:hover {
+
+            @include desktopStyle {
+                background: color(bg);
+                //transition: $transition;
+            }
+        }
+
+        &.active {
+            position: relative;
+            padding-left: 28px;
+
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 3px;
+                right: 3px;
+                left: 3px;
+                display: block;
+                width: 8px;
+                height: calc(100% - 6px);
+                background: linear-gradient(260.07deg, #326BD2 0%, #5CD384 100%);
+                border-radius: 2px;
+                opacity: 0.6;
+            }
+
+            @include desktopStyle {
+                padding-left: 40px;
+                background: color(bg);
+            }
+        }
+    }
+}

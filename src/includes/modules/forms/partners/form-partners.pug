@@ -1,0 +1,57 @@
+-
+    var partnetsForm = [
+        {
+            isError: false,
+            label: 'Ваше имя',
+            errorText: 'Введите Ваше имя',
+            requireType: 'text',
+            type: 'text',
+            name: 'name',
+            placeholder: '',
+            isRequire: true,
+            value: ''
+        },
+        {
+            isError: false,
+            label: 'Электронная почта',
+            errorText: 'Неверный формат почты',
+            requireType: 'email',
+            possible: 'true',
+            type: 'email',
+            name: 'email',
+            placeholder: '',
+            isRequire: true,
+            value: ''
+        },
+        {
+            isError: false,
+            label: 'Телефон',
+            errorText: 'Введите номер телефона',
+            requireType: 'tel',
+            possible: 'true',
+            type: 'tel',
+            placeholder: '+7 (___) ___-__-__',
+            isRequire: true,
+            value: ''
+        },
+        {
+            isError: false,
+            isRequire: false,
+            label: 'Комментарий (необязательно)',
+            errorText: 'Напишите свой вопрос',
+            requireType: 'textarea',
+            type: 'textarea',
+            placeholder: 'Ваш комментарий',
+            value: ''
+        }
+    ]
+
+mixin formPartners
+    +form({
+        isDefaultValidate: true,
+        fieldList: partnetsForm,
+        formName: 'default',
+        textBtn: btnText.questions,
+        action: 'http://localhost/gift.php',
+    })
+

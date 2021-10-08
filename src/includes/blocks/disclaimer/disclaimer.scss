@@ -1,0 +1,27 @@
+/********************** disclaimer **************************/
+
+@import "src/style/_";
+
+.disclaimer {
+    margin: 0;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: color(disclaimer);
+    font-family: $fontOpenSansLight;
+    font-weight: 300;
+
+    a {
+        font-family: $fontOpenSansLight;
+        font-weight: 300;
+        color: color(blue);
+        transition: opacity 300ms ease-in;
+
+        &:hover {
+            opacity: 0.8;
+            transition: opacity 300ms ease-in;
+        }
+    }
+}
+
+/********************** end disclaimer **************************/

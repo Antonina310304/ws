@@ -1,0 +1,30 @@
+//-mixin form(fieldList, formName, textBtn, disclaimer=true)
+mixin form(params)
+    //- успешный запрос https://run.mocky.io/v3/ca259434-7728-435c-8df1-229c3dbc711a
+    //-ошибка полей https://run.mocky.io/v3/fa4632fb-b637-409e-af79-704304c2f60e
+    form.form(
+        class=`${params.isDefaultValidate ? 'js-validate-form' : ''} js-${params.formName}-form ${params.formNameMore ? params.formNameMore : ''}`
+        method="POST"
+        action=params.action novalidate)
+        ._in
+            each item in params.fieldList
+                ._input
+                    if(item.type == 'textarea')
+                        +formTextarea(item)
+                    else if (item.type ==  'inputFile')
+                        +dropzone
+                    else
+                        +formInput(item)
+        if(params.aut)
+            .checkbox-block-wrap
+                p.checkbox-block
+                    input(type="checkbox" name='remember' id="remember-me")._input
+                    label(for="remember-me")._label Запомнить меня
+                a(href="restore.html").blue-link Восстановить пароль
+        ._button
+            +buttonBlue(params.textBtn)
+        if(params.disclaimer)
+            p.__disclaimer.disclaimer
+                | Нажимая на кнопку «#{params.textBtn}», вы даете согласие на отправку и обработку своих &nbsp
+                a(href="#") персональных данных
+

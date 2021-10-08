@@ -1,0 +1,22 @@
+.min-price {
+  //width: 226px;
+  background: rgba(255, 255, 255, 0.2);;
+  border: solid 2px #ffffff;
+  box-sizing: border-box;
+  border-radius: 7px;
+  border-image-slice: 10; /* border-radius*2 */
+  border-image-repeat: round;
+  border-image-width: 10px; /* border-radius*2 */
+  border-image-source: url('i/index/border.png');
+  padding: 10px 20px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+  color: #FFFFFF;
+
+  p {
+    margin: 0;
+  }
+}

@@ -1,0 +1,49 @@
+-
+    var contactsList = [
+        {
+            isError: false,
+            label: 'Электронная почта',
+            errorText: 'Неверный формат почты',
+            requireType: 'email',
+            type: 'email',
+            possible: 'true',
+            name: 'email',
+            placeholder: '',
+            isRequire: true,
+            value: ''
+        },
+        {
+            isError: false,
+            label: 'Телефон',
+            errorText: 'Введите номер телефона',
+            requireType: 'tel',
+            name: 'tel',
+            possible: 'true',
+            type: 'tel',
+            placeholder: '+7 (___) ___-__-__',
+            isRequire: true,
+            value: ''
+        },
+        {
+            isError: false,
+            label: 'Телефон',
+            errorText: '',
+            requireType: 'inputFile',
+            possible: 'true',
+            type: 'inputFile',
+            placeholder: 'Прикрепить или перетащить файлы',
+            isRequire: true,
+            value: ''
+        },
+    ]
+
+mixin formContacts(formName)
+    .page__form
+        +form({
+            isDefaultValidate: true,
+            fieldList: contactsList,
+            formName: 'dropzone',
+            textBtn: btnText.requisite,
+            formNameMore: 'js-default-form',
+            action: 'http://localhost/upload-files.php',
+        })

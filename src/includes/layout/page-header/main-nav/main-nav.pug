@@ -1,0 +1,18 @@
+mixin mainNav(activeLink)
+    nav.main-nav
+        ._burger.d-xl-none
+            +burger()
+        ._wrapper
+            ._head
+            ._body
+                ._content
+                    ._site-nav
+                        +siteNav(activeLink)
+                    ._login.main-nav__in.d-xl-none
+                        +buttonAut(btnText.login)
+                    ._contacts.main-nav__in.d-m-none
+                        +contactsBlock()
+                    ._callback.main-nav__in.d-m-none
+                        +buttonGradient(btnText.callback)(data-toggle = 'modal', data-target = 'callback')
+                    ._user-nav.d-none.d-xl-block
+                        +buttonLogin()

@@ -1,0 +1,44 @@
+/*************** footer-menu ****************/
+
+@import "src/style/_";
+$margin: 10px;
+
+.footer-menu {
+    margin: 0;
+    margin-top: -$margin;
+    margin-bottom: -$margin;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+        display: block;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: $margin 0;
+        text-align: center;
+        text-decoration: none;
+
+        span, a {
+            text-decoration: none;
+        }
+
+        //span {
+        //    position: relative;
+        //    border-bottom: 1px solid transparentize(color(white), 0.7);
+        //    transition: border-color 200ms ease-in;
+        //}
+        //
+        //&:hover {
+        //    span {
+        //        border-color: color(white);
+        //        transition: border-color 200ms ease-in;
+        //    }
+        //}
+
+        @include desktopStyle {
+            text-align: left;
+        }
+    }
+}

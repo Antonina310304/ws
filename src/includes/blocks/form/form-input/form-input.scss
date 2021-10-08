@@ -1,0 +1,100 @@
+/***************** form-input *********************/
+
+@import "src/style/_";
+$point: 640px;
+
+.form-input {
+    $this: &;
+
+    position: relative;
+    display: block;
+    line-height: 0;
+
+    &__wrap {
+        margin: 0 0 10px;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 13px;
+        font-family: $fontOpenSans;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        @media (min-width: $point) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__error {
+        //position: absolute;
+        //bottom: 0;
+        font-size: 18px;
+        line-height: 120%;
+        display: none;
+        margin: 8px 0 0;
+        color: color(error3);
+        font-family: $fontOpenSansLight;
+        font-weight: 300;
+
+        #{$this}--error & {
+            display: block;
+        }
+
+        //@media (min-width: $point) {
+        //    position: relative;
+        //}
+    }
+
+    &__label {
+        margin: 0;
+        color: color(dark_grey);
+    }
+
+    textarea {
+        resize: none;
+        box-sizing: border-box;
+        transition: height 150ms ease-in;
+        min-height: 190px;
+    }
+
+    &__input {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 18px;
+        line-height: 30px;
+        background: #FCFCFD;
+        border: 1px solid #E3E3E8;
+        box-sizing: border-box;
+        font-weight: 300;
+        border-radius: 4px;
+        outline: none;
+        letter-spacing: 0.05em;
+        font-family: $fontOpenSansLight;
+
+
+        #{$this}--error & {
+            border: 1px solid color(error3);
+        }
+
+        @include placeholder {
+            align-items: center;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 30px;
+            font-family: $fontOpenSansLight;
+            color: #808080;
+            letter-spacing: 0.05em;
+        }
+    }
+
+    &--error {
+        padding-bottom: 30px;
+
+        @media (min-width: $point) {
+            padding-bottom: 0;
+        }
+    }
+}
+
+/***************** end form-input *********************/

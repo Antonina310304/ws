@@ -1,0 +1,54 @@
+/************* form *************/
+
+@import "src/style/_";
+
+.form {
+
+    $this: &;
+
+    &__input {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__inner {
+        margin-bottom: 45px;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        //margin-bottom: 25px;
+        margin-top: 15px;
+    }
+
+    &__button {
+        margin-bottom: 20px;
+        margin-top: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__dropzone {
+        position: relative;
+        z-index: 100;
+        box-sizing: border-box;
+        min-height: 70px;
+        max-height: 70px;
+        border: 1px dashed color(blue);
+        cursor: pointer;
+
+        &:hover .form__dropzone {
+            background: rgba(10, 186, 238, 0.08);
+            transition: background 200ms ease-in;
+        }
+    }
+}
+
+/************* end form *************/

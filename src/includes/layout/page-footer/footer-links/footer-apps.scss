@@ -1,0 +1,44 @@
+/*************** footer-links ****************/
+
+@import "src/style/_";
+
+.footer-links {
+    &--page-footer {
+        width: 138px;
+        margin-right: auto;
+        margin-left: auto;
+
+        @include desktopStyle {
+            width: 138px;
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+
+    &__link {
+        &.text-link {
+            text-decoration: none;
+        }
+    }
+
+    &__item {
+        margin-bottom: 56px;
+        text-align: center;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include desktopStyle {
+            text-align: left;
+        }
+    }
+
+    &__footer-app {
+        margin: 0 auto 20px;
+
+        @include desktopStyle {
+            margin-right: 0;
+        }
+    }
+}

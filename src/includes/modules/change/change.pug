@@ -1,0 +1,25 @@
+include data
+
+mixin change
+    .container
+        .page__header-wrap
+            h2.page__title-wrapper.section-title Придумайте новый пароль
+            p.page-subheading Пароль должен состоять из 6+ символов
+
+        .page__form
+
+            form.form(
+                method="POST"
+                action='' novalidate).js-change-form
+                ._inner
+                    each item in changeForm
+                        ._input
+                            if(item.type == 'textarea')
+                                +formTextarea(item)
+                            else if (item.type == 'inputFile')
+                                +dropzone
+                            else
+                                +formInput(item)
+                ._button
+                    +buttonBlue('Восстановить')
+

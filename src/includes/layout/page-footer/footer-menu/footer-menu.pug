@@ -1,0 +1,11 @@
+mixin footerMenu(menu)
+    ul.footer-menu
+        each val in menu
+            li._item
+                if(val[0] =='Вакансии')
+                    a(href=val[1] target="_blank")._link.outside-link
+                        span.text-link=val[0]
+                else
+                    a(href=val[1])._link
+                        span.text-link=val[0]
+
